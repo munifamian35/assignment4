@@ -1,0 +1,46 @@
+/*GLOBAL*/
+
+html{
+    scroll-behavior: smooth;
+    font-family:sans-serif;
+}
+
+/* laptop layout*/
+nav a:link {color: rgb(9, 26, 73);}
+nav a:hover{color: rgb(21, 58, 159);}
+nav a:visited{color:rgb(45, 62, 111);}
+
+
+header{
+    display: flex;
+    background-color: rgb(172, 243, 228);
+    justify-content:space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 30;
+    height: 10vh;
+}
+
+.header-section a img{
+    height: 4.6875rem;
+}
+
+nav {   
+    box-sizing: border-box;
+    text-align: center;
+    padding-right: .9375rem;
+    z-index: 30;
+    height: 10vh;     
+}
+
+nav ul {padding: 0px;}
+
+nav li{
+    display:inline-flex;
+    padding-left: .3125rem;
+    padding-right: .3125rem;
+    border-left: .1875rem  rgb(243, 16, 239) solid;
+    margin: 0;   
+}
