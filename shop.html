@@ -7,45 +7,120 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-    <div class="header" id="header">
+    <header>
+        <a href="index.html"> <img src="images/cendazelogo.jpg" alt="logo" class="logo"> </a>
+
+        <a class="openslide" onclick="open_box()" href="#">
+            <svg viewBox="0 0 100 80" width="40" height="40">
+                <rect width="100" height="20"></rect>
+                <rect y="30" width="100" height="20"></rect>
+                <rect y="60" width="100" height="20"></rect>
+            </svg>
+        </a>
+
+       <nav>
+            <div class="nav">
+                <ul>
+                    <li>  <a href="index.html">homepage </a> </li> 
+                    <li> <a href="#about">about us  </a>  </li>
+                    <li> <a href="#contact">contact us</a></li>
+                </ul>
+            </div>
+ 
+            <div class="side-menu" id="menu">
+                <ul>
+                    <li><a href="homepage.html">homepage </a> </li> 
+                    <li> <a href="#about">about us  </a>  </li>
+                    <li> <a href="#contact">contact us</a></li>
+                    
+                    <button><a href="#" onclick="close_box()">goaway</a></button>
+                </ul>
+            </div>
+                
+        </nav>
+    </header>
+
+    <div class="hero" id="hero">
         <h1>Cendaze</h1>
-        <p>Get to know about us</p>
+        <p>Explore Our Collection</p>
     </div>
 
     <main>
         <h2>Shop</h2>
         <div class="products">
-            <div id="glasse1">
-               <img src="images/sunglasses 5.jpg">
-               <a href="cart.html"><p>a box of 6 macarons for $15</p></a>
+            <div class="glasses">
+               <img src="images/glasses1.png">
+               <h3>Sinclair</h3>
+               <p>$350</p>
+               <a href="index.html" class="button">buy now</a>
             </div>
 
-            <div id="glasses2">
-                <img src="images/sunglasses 6.jpeg">
-                <a href="cart.html"><p>a box of 6 macarons for $15</p></a>
+            <div class="glasses">
+                <img src="images/glasses2.png">    
+                <h3>Sandy</h3>
+               <p>$550</p>
+                <a href="index.html" class="button">buy now</a>
             </div>
 
-            <div id="glasses3">
-                <img src="images/sunglasses 3.jpeg">
-                <a href="cart.html"><p>a box of 6 macarons for $15</p></a>
-           </div>
-
-           <div id="glasses4">
-                <img src="images/vladimir-sayapin-1zvWlsoGMCQ-unsplash.jpg">
-                <a href="cart.html"><p>a box of 6 macarons for $15</p></a>
-           </div>
-
-           <div id="glasses5">
-                <img src="images/mark-grant-L3hFGHr52Zc-unsplash.jpg">
-                <a href="cart.html"><p>a box of 6 macarons for $15</p></a>
-           </div>
-
-           <div id="glasses6">
-                <img src="images/sunglasses 4.jpeg">
-                <a href="cart.html"><p>a box of 6 macarons for $15</p></a>
+            <div class="glasses">
+                <img src="images/glasses3.png">
+                <h3>Bella</h3>
+               <p>$450</p>
+                <a href="index.html" class="button">buy now</a>
             </div>
-            
+
+           <div class="glasses">
+                <img src="images/glasses4.png">
+                <h3>Hailey</h3>
+               <p>$380</p>
+                <a href="index.html" class="button">buy now</a>
+            </div>
+
+           <div class="glasses">
+                <img src="images/glasses5.png">
+                <h3>Yolo</h3>
+               <p>$385</p>
+                <a href="index.html" class="button">buy now</a>
+            </div>
+
+           <div class="glasses">
+                <img src="images/glasses6.png">
+                <h3>Moda</h3>
+               <p>$545</p>
+                <a href="index.html" class="button">buy now</a>
+            </div>
+
+            <div class="glasses">
+                <img src="images/glasses7.png">
+                <h3>Moda</h3>
+               <p>$545</p>
+                <a href="index.html" class="button">buy now</a>
+            </div>
+
+            <div class="glasses">
+                <img src="images/glasses8.png">
+                <h3>Moda</h3>
+                <p>$545</p>
+                <a href="index.html" class="button">buy now</a>
+            </div>
+
         </div>
     </main>
+
+    <footer>
+        <h3>Copyright © 2023 Cendaze</h3>
+    </footer>
+    
+    <script>
+        //open the menu
+              function open_box() {
+            document.getElementById('menu').style.width=('100vw');
+        } 
+
+        //close the menu
+        function close_box() {
+            document.getElementById('menu').style.width=('0px');
+        }
+    </script>
 </body>
 </html>
