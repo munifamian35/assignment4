@@ -117,6 +117,19 @@ nav li{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-left: 0;
 }
+.home-shop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--white-blue-color);
+}
+
+.home-shop-items{
+    display: flex;
+    flex-direction: row;
+}
+
 
 .gallery{
     background-color: var(--dark-blue-color);
@@ -255,7 +268,7 @@ footer {
         padding: 25px;
     }
     
-    
+
     .gal-img{
         grid-column-gap: 0px;
         grid-row-gap: 0px;
@@ -349,7 +362,9 @@ footer {
     .intro{
         padding: 15px;
     }
-    
+    .home-shop-items{
+        flex-direction: column;
+    }
     
     .gal-img{
       grid-template-columns: 1fr 1fr;
@@ -362,6 +377,13 @@ footer {
         height: 200px;
     }
     
+    .blog-img{
+        grid-template-columns: 1fr;
+        align-items: center;
+        align-content: center;
+        padding-right:0 ;
+    }
+
     .blog img{
         width:300px;
     }
