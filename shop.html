@@ -3,45 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cendaze website</title>
+    <title>cendaze website</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
     <header>
         <a href="index.html"> <img src="images/cendazelogo.jpg" alt="logo" class="logo"> </a>
 
-        <a class="openslide" onclick="open_box()" href="#">
-            <svg viewBox="0 0 100 80" width="40" height="40">
-                <rect width="100" height="20"></rect>
-                <rect y="30" width="100" height="20"></rect>
-                <rect y="60" width="100" height="20"></rect>
-            </svg>
-        </a>
-
-       <nav>
-            <div class="nav">
-                <ul>
-                    <li>  <a href="index.html">Homepage </a> </li> 
-                    <li> <a href="aboutus.html">About Us  </a>  </li>
-                    <li> <a href="shop.html">Shop </a></li>
-                </ul>
-            </div>
- 
-            <div class="side-menu" id="menu">
-                <ul>
-                    <li><a href="index.html">Homepage </a> </li> 
-                    <li> <a href="aboutus.html">About Us  </a>  </li>
-                    <li> <a href="shop.html">Shop</a></li>
-                    
-                </ul>
-            </div>
-                
+        <nav>
+            <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+            <ul id="menu">
+                <li>  <a href="index.html">Homepage </a> </li> 
+                <li> <a href="aboutus.html">About Us  </a>  </li>
+                <li> <a href="shop.html">Shop </a></li>
+            </ul>
         </nav>
     </header>
 
     <div class="hero" id="hero">
         <h1>Cendaze</h1>
-        <p>Explore Our Collection</p>
+        <h3>Explore Our Collection</h3>
     </div>
 
     <main>
@@ -57,42 +39,42 @@
             <div class="glasses">
                 <img src="images/glasses2.png" alt="shop">    
                 <h3>Sandy</h3>
-               <p>$550</p>
+                <p>$550</p>
                 <a href="index.html" class="button">buy now</a>
             </div>
 
             <div class="glasses">
                 <img src="images/glasses3.png" alt="shop">
                 <h3>Bella</h3>
-               <p>$450</p>
+                <p>$450</p>
                 <a href="index.html" class="button">buy now</a>
             </div>
 
            <div class="glasses">
                 <img src="images/glasses4.png" alt="shop">
                 <h3>Hailey</h3>
-               <p>$380</p>
+                <p>$380</p>
                 <a href="index.html" class="button">buy now</a>
             </div>
 
            <div class="glasses">
                 <img src="images/glasses5.png" alt="shop">
                 <h3>Yolo</h3>
-               <p>$385</p>
+                <p>$385</p>
                 <a href="index.html" class="button">buy now</a>
             </div>
 
            <div class="glasses">
                 <img src="images/glasses6.png" alt="shop">
                 <h3>Moda</h3>
-               <p>$545</p>
+                <p>$545</p>
                 <a href="index.html" class="button">buy now</a>
             </div>
 
             <div class="glasses">
                 <img src="images/glasses7.png" alt="shop">
                 <h3>Moda</h3>
-               <p>$545</p>
+                <p>$545</p>
                 <a href="index.html" class="button">buy now</a>
             </div>
 
@@ -111,15 +93,10 @@
     </footer>
 
     <script>
-        //open the menu
-              function open_box() {
-            document.getElementById('menu').style.width=('100vw');
-        } 
-
-        //close the menu
-        function close_box() {
-            document.getElementById('menu').style.width=('0px');
-        }
+          //open the menu
+          document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("menu").classList.toggle("active");
+        });
     </script>
 </body>
 </html>

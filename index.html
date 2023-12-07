@@ -4,58 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cendaze website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
 </head>
 <body>
     <header>
-       <div class="logo"><a href="index.html"> <img src="images/cendazelogo.jpg" alt="logo" class="logo"> </a></div> 
-
-        <a class="openslide" onclick="open_box()" href="#">
-            <svg viewBox="0 0 100 80" width="40" height="40">
-                <rect width="100" height="20"></rect>
-                <rect y="30" width="100" height="20"></rect>
-                <rect y="60" width="100" height="20"></rect>
-            </svg>
-        </a>
-
-         
+       <div class="logo"><a href="index.html"> <img src="images/cendazelogo.jpg" alt="logo" class="logo"> </a></div>
         <nav>
-            <div class="nav">
-                <ul>
-                    <li>  <a href="index.html">Homepage </a> </li> 
-                    <li> <a href="aboutus.html">About Us  </a>  </li>
-                    <li> <a href="shop.html">Shop </a></li>
-                </ul>
-            </div>
- 
-            <div class="side-menu" id="menu">
-                <ul>
-                    <li><a href="index.html">Homepage </a> </li> 
-                    <li> <a href="aboutus.html">About Us  </a>  </li>
-                    <li> <a href="shop.html">Shop</a></li>
-                    
-                </ul>
-            </div>      
+            <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+            <ul id="menu">
+                <li>  <a href="index.html">Homepage </a> </li> 
+                <li> <a href="aboutus.html">About Us  </a>  </li>
+                <li> <a href="shop.html">Shop </a></li>
+            </ul>
         </nav>
+       
     </header>
 
 
-    <div class="hero" id="hero">
+    <section class="hero" id="hero">
         <h1>Cendaze</h1>
-        <p>where neccessity meets elagance</p>
+        <h3>where neccessity meets elagance</h3>
          <a href="shop.html" class="button">Go to Shop</a>
 
-    </div>
+    </section>
 
-    <div class="intro">
+    <section class="intro">
         <h2>Timeless Panache</h2>
         <p>Welcome to the epitome of enduring elegance. In "Timeless Panache," Cendaze unveils a collection of eyewear that defies the constraints of time. These sun- glasses are more than accessories; they are legacies of style, meticulously craft- ed to encapsulate the essence of eternal allure. With a fusion of vintage sophis- tication and contemporary charm, each frame tells a tale of perpetual elegance, inviting you into a realm where trends fade, but true style remains. Explore a world where every detail speaks of refined craftsmanship, and every wear is a celebration of timeless fashion.
             <br><br>
         Experience the ageless appeal of "Timeless Paache," where your elegance stands eternally unmatched.</p>
-    </div>
+    </section>
      
-    <div class="home-shop">
+    <section class="home-shop">
         <h2>A Glance of Our Shop</h2>
         <div class="home-shop-items">
             <div class="glasses">
@@ -81,10 +63,10 @@
         </div>
         <a href="shop.html" class="button">Explore More</a>
 
-    </div>
+    </section>
     
         
-    <div class="gallery>">
+    <section class="gallery>">
         <h2> Gallery </h2>
         <div class="gal-img">
             <img src="images/gal1.png" alt="gallery1" >
@@ -100,18 +82,33 @@
             <img src="images/gal12.jpg" alt="gallery11" >
             <img src="images/gal11.jpg" alt="gallery12" >
         </div>
-    </div>
+    </section>
 
-        <div class="blog">
-            <h2>Discover our blogs</h2>
-            <p>Cendaze speaks with an aura of sophistication and approachability. Our tone blends confidence with creativity, inviting you into a world of timeless glamour. It's like a friendly whisper of elegance, encouraging self-expression and inspiring con- fidence. Welcome to Cendaze, where every word is a brushstroke in the canvas of style and grace.</p>
-            <div class="blog-img">
+    <section class="blog">
+        <h2>Discover our blogs</h2>
+        <p>Cendaze speaks with an aura of sophistication and approachability. Our tone blends confidence with creativity, inviting you into a world of timeless glamour. It's like a friendly whisper of elegance, encouraging self-expression and inspiring con- fidence. Welcome to Cendaze, where every word is a brushstroke in the canvas of style and grace.</p>
+        <div class="blog-img">
+            <div class="blog-link">
                 <img src="images/blog1.png" alt="blog">
+                <h3>Morning Essentials ><h3>
+            </div>
+
+            <div class="blog-link">
                 <img src="images/blog2.png" alt="blog">
+                <h3>City Vibes ><h3>
+            </div>
+
+            <div class="blog-link">
                 <img src="images/blog3.png" alt="blog">
-                <img src="images/blog4.png" alt="blog">
+                <h3>Daily Splurge ></h3>
+            </div>
+
+            <div class="blog-link">
+               <img src="images/blog4.png" alt="blog">
+               <h3>Aesthetics ><h3>
             </div>
         </div>
+    </section>
 
     <footer>
         <h3>Copyright © 2023 Cendaze</h3>
@@ -119,14 +116,9 @@
         
     <script>
         //open the menu
-              function open_box() {
-            document.getElementById('menu').style.width=('100vw');
-        } 
-
-        //close the menu
-        function close_box() {
-            document.getElementById('menu').style.width=('0px');
-        }
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("menu").classList.toggle("active");
+        });
     </script>
     
 </body>
